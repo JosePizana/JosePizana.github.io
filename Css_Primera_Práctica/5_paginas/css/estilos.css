@@ -1,0 +1,41 @@
+body {
+margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("../images/fondo.jpg"); /* cambia según tu ruta */
+  background-size: cover; /* rellena la pantalla */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* evita el desplazamiento */
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+background-color: #472C1B; /* color oscuro */
+  color: #FFD9B3; /* color claro */
+  border-left: 8px solid #8B5A2B;
+  padding: 10px;
+  text-align: left;
+}
+
+img {
+width: 300px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+ul {
+list-style: none; /* sin puntos */
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+display: inline; /* todos en la misma línea */
+  border: 2px solid #472C1B;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #FFD9B3;
+  border-radius: 8px;
+}
+
