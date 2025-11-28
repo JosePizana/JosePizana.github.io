@@ -1,145 +1,124 @@
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
+
+body {
+    background-color: #f9f6ff; 
+    font-family: Arial, sans-serif;
+}
+
+#header h1 {
     background-color: rgb(217, 208, 255);
     border-bottom: 5px solid black;
     padding-top: 0px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
-/* ================== */
-/* (2) Imagen derecha */
-/* (3) margen derecha */
-/* ================== */
-img {
-    float: top;
-    border: 5px solid #000;
+#image img {
+    float: right;
     margin-right: 60px;
-}
-
-ul {
-    padding: 0px;
-}
-
-li {
-    list-style: none;
-}
-
-p {
-    background-color: rgb(217, 208, 255);
-}
-
-/* ================== */
-/*  CONTENEDORES      */
-/* ================== */
-
-#header {
-    text-align: center;
+    border: 4px solid black;
     margin-bottom: 10px;
 }
 
 #content {
-    width: 95%;
+    width: 90%;
     margin: auto;
 }
 
+/* IMPORTANTE → Forzar que los párrafos empiecen debajo de la imagen */
 #text {
-    width: 100%;
+    clear: both;
+    /* separa los párrafos como en el ejemplo */
 }
 
-/* ========================================================= */
-/* PÁRRAFOS → (5) sombra, (9) sangría, (10) ancho 90%, (11) separación */
-/* ========================================================= */
+/* ======== PÁRRAFOS ======== */
 #text p {
     width: 90%;
     margin: 10px auto;
-    padding: 15px;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    padding: 18px;
+    background-color: #cecbff;
+    border: 3px dashed black;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
     text-indent: 40px;
-    border: 5px solid #000;
-    border-style:dashed;
+    font-size: 15px;
 }
 
-/* ================================ */
-/* 4. Primer párrafo → esquinas arriba + fondo repetido */
-/* ================================ */
+/* Primer párrafo */
 #text p:first-child {
     border-radius: 30px 30px 0 0;
-    background-image: url("../images/fondoParrafo.png"); /* Ajusta el nombre si es distinto */
+    background-image: url("../images/fondoParrafo.png");
     background-repeat: repeat;
 }
 
-/* ================================= */
-/* 8. Último párrafo → esquinas abajo */
-/* ================================= */
+/* Último párrafo */
 #text p:last-child {
     border-radius: 0 0 30px 30px;
 }
 
-/* ================== */
-/*      MENÚ          */
-/* ================== */
-
+/* ======== MENÚ ======== */
 #menu {
+    text-align: center;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
-#menu a{
-    text-decoration: none;
-    color: rgb(77, 38, 139);
+#menu ul {
+    list-style: none;
 }
 
-/* 7. Línea roja de 5px a la izquierda */
-#menu li{
+#menu li {
+    display: inline-block;
+    padding: 0 2px;
+    margin: 0;
     border-left: 5px solid red;
-    padding-left: 10px;
-    margin: 5px 0;
 }
 
-/* 14. Hover subrayado rojo */
-#menu li a:hover{
+#menu li:first-child {
+    border-left: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #513b79;
+    font-weight: bold;
+}
+
+#menu li a:hover {
     text-decoration: underline;
     text-decoration-color: red;
 }
 
-/* ================== */
-/* FOOTER            */
-/* ================== */
-
-
-#footer{
-    background-color: rgb(117, 47, 209);
-    border-top: 5px solid rgb(62, 65, 255);
-    margin-top: 30px;
-    padding: 0px;
+/* ======== FOOTER ======== */
+#footer {
+    margin-top: 10px;
+    padding: 2px;
+    background-color: #5f478d;
+    color: white;
+    border-top: 5px solid rgb(51, 94, 187);
     text-align: center;
-    color: rgb(255, 255, 255);
+    font-size: 14px;
 }
 
-#footer a{
-    color: rgb(255, 255, 255);
+#footer a {
+    color: white;
 }
 
-#footer a:hover{
-
+#footer a:hover {
     text-decoration: underline;
 }
 
-/* =============================== */
-/*     (13) MEDIA QUERY            */
-/* =============================== */
+/* ======== MEDIA QUERY ======== */
 @media all and (max-width: 500px) {
-
-    /* 2. borde rojo */
-    /* 3. tamaño 90% */
-    /* 4. centrada */
-    img {
+    #image img {
         float: none;
         width: 90%;
-        display: block;
         margin: 10px auto;
+        display: block;
         border: 3px solid red;
     }
 }
