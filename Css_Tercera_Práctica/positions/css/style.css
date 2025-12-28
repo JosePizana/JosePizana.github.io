@@ -1,7 +1,6 @@
 *{
   margin: 0px auto;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 body {
@@ -55,19 +54,16 @@ body {
     color: white;
     border-bottom: 5px red solid;
     font-weight: bold;
-    padding: 5px 5px 0px 5px;
 }
 
 .menu {
     position: fixed;
-    top: 0;
     bottom: 42px;
     padding: 10px;
     text-align: center;
     width: 100%;
     background-color: white;
     border-top: 2px black solid;
-    z-index: 1000;
 }
 .footer {
     position: fixed;
@@ -87,20 +83,16 @@ a {
     text-decoration: none;
     padding-left: 5px;
     border-left: blue 5px solid;
-    color: black;
 }
 a:visited{
     /*color: blue;*/
 }
 a:hover{    
-    background-color: orange;
-    color: blue;
+    background-color: black;
+    color: white;
     text-decoration: underline;
 } 
 
-/* =========================
-   FLOAT (PUNTOS 2 y 3)
-========================= */
 .floatLeft {
     float: left;
 }
@@ -113,9 +105,6 @@ a:hover{
     clear: both;
 }
 
-/* =========================
-   OVERFLOW (PUNTO 5)
-========================= */
 .overflow {
     width: 400px;
     height: 150px;
@@ -125,9 +114,6 @@ a:hover{
     padding: 10px;
 }
 
-/* =========================
-   MEDIA QUERY (PUNTO 7)
-========================= */
 @media (max-width: 768px) {
 
     .floatLeft,
