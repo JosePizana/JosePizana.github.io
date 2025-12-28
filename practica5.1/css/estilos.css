@@ -42,13 +42,9 @@ p {
 }
 
 #menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
-  /* necesitas 3 instrucciones*/
-  /*1: */
-  /*2: */
-  /*3: */
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
@@ -68,12 +64,9 @@ p {
 }
 
 #menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
-  /* necesitas 2 instrucciones*/
-  /*1: */
-  /*2: */
+  background-color: orange;
+  text-decoration: underline;
+  text-decoration-color: blue;
 }
 
 #footer{
