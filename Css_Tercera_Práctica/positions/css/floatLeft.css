@@ -1,15 +1,26 @@
 @import url('style.css');
 .flota {
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: 200px;
 }
 
-.especial {
-    position: relative;
-    display: inline-block;    
+.data {
+    width: 900px;
+    margin: 80px auto;
 }
-.normal {
-    position: normal;
-    display: inline-block;    
+
+.button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    background-color: #006400;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: orange;
+    color: blue;
 }

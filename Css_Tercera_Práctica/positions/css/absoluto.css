@@ -2,9 +2,22 @@
 
 
 .especial {
-    position:absolute;
-    display: inline-block;    
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    background-color: red;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
 }
+
 .normal {
-    display: inline-block;    
+    background-color: green;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
 }

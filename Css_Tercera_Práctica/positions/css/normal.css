@@ -1,7 +1,23 @@
 @import url('style.css');
 .especial {
-    position: normal;
+    position: static;
+    background-color: red;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 .normal {
-    position: normal;
+    position: static;
+    background-color: green;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }

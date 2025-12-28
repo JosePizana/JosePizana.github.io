@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POSITION</title>
+    <title>Float Right - Display</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/floatRight.css" />
 </head>
 
 <body>
-    <div class="data">  
-        <img src="images/1.jpg" class="flota">  
+
+    <div class="data">
+
+        <a class="button" href="#"
+           onclick="document.getElementById('imageRight').style.display='none'">
+            Ocultar / display
+        </a>
+
+        <img src="images/1.jpg" id="imageRight" class="flotaRight">
+
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eum, quaerat odit nisi hic voluptates a dicta architecto at commodi dolorem delectus sit ex quod corrupti iure repellendus fugit repudiandae.
         Velit fugiat minima facere veniam itaque minus laborum eveniet doloremque incidunt, sed reiciendis vero a neque deserunt aut magni. Eligendi, impedit? Eius commodi cumque dolor, est impedit dicta veniam. Recusandae.
@@ -23,17 +32,18 @@
         Mollitia ex quasi eligendi fugit sit. Perferendis similique fugit, ea aliquam numquam distinctio ipsa nihil culpa, excepturi pariatur minima officia aperiam vel! Ipsam reprehenderit maiores repudiandae, a veniam magnam id!
         Quas dicta vel minima esse minus atque debitis eos delectus, iusto porro repudiandae cum inventore accusantium repellat nisi quasi ad facilis natus aspernatur? Enim ipsa ipsam illum nemo, porro saepe.
         Exercitationem, nesciunt non dolores ea reprehenderit perferendis labore expedita sequi ullam recusandae atque nemo natus ex error! Vitae aliquid deserunt et omnis nesciunt? Quas perferendis nostrum ex at dolorum corporis!
-        Ullam voluptates corrupti quo eos, necessitatibus optio consequatur exercitationem? Eligendi fugiat culpa blanditiis quasi, nulla, voluptatum minima tempora quis porro, et rerum illo quia ullam ea debitis officia? Odit, quisquam.        
+        Ullam voluptates corrupti quo eos, necessitatibus optio consequatur exercitationem? Eligendi fugiat culpa blanditiis quasi, nulla, voluptatum minima tempora quis porro, et rerum illo quia ullam ea debitis officia? Odit, quisquam.
         </p>
+
         <p>Texto del 2</p>
+
     </div>
+
     <div class="estilosCss">
         <pre>
             .flota {
-                float: right; <------
-                margin-right: 1em;
-                margin-bottom: 1em;
-              }             
+            float: right;
+            }
         </pre>
     </div>
 
@@ -41,10 +51,10 @@
         <li>
             <a href="index.html">Normal - block</a>
             <a href="NInline.html">Normal - inline</a>
-            <a href="NInlineBlock.html">Normal - inline-block</a>                        
+            <a href="NInlineBlock.html">Normal - inline-block</a>
             <a href="relativo.html">Relativo</a>
             <a href="absoluto.html">Absoluto</a>
-            <a href="absolutoPadre.html">Absoluto Padre</a>                        
+            <a href="absolutoPadre.html">Absoluto Padre</a>
             <a href="fijo.html">Fijo</a>
             <a href="floatLeft.html">Float.Left</a>
             <a href="floatRight.html" class="active">Float.Right</a>
@@ -52,9 +62,10 @@
             <a href="overflow.html">Overflow</a>
         </li>
     </ul>
+
     <div class="footer">
         <p>
-            <b>FLOAT Right.</b> Las capas rodean a la capa que flota.
+            <b>DISPLAY: NONE.</b> El elemento desaparece y el contenido se recoloca.
         </p>
     </div>
 

@@ -1,12 +1,20 @@
 *{
   margin: 0px auto;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
     width:100%;
 }
 
+.contenedor{
+    width: 900px;
+    margin: 40px auto;
+}
+
 .padre{
+    position: relative;
     top: 20px;
     left: 500px;
 }
@@ -39,6 +47,7 @@ body {
 .estilosCss {
     margin-top: 40px;
     border: 5px black solid;
+    padding: 10px;
 }
 
 .active {
@@ -51,12 +60,14 @@ body {
 
 .menu {
     position: fixed;
+    top: 0;
     bottom: 42px;
     padding: 10px;
     text-align: center;
     width: 100%;
     background-color: white;
     border-top: 2px black solid;
+    z-index: 1000;
 }
 .footer {
     position: fixed;
@@ -76,11 +87,56 @@ a {
     text-decoration: none;
     padding-left: 5px;
     border-left: blue 5px solid;
+    color: black;
 }
 a:visited{
     /*color: blue;*/
 }
 a:hover{    
-    background-color: black;
-    color: white;
+    background-color: orange;
+    color: blue;
+    text-decoration: underline;
 } 
+
+/* =========================
+   FLOAT (PUNTOS 2 y 3)
+========================= */
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* =========================
+   OVERFLOW (PUNTO 5)
+========================= */
+.overflow {
+    width: 400px;
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* =========================
+   MEDIA QUERY (PUNTO 7)
+========================= */
+@media (max-width: 768px) {
+
+    .floatLeft,
+    .floatRight {
+        float: none;
+        width: 100%;
+    }
+
+    .contenedor {
+        width: 95%;
+    }
+}

@@ -6,6 +6,6 @@
       display: inline-block;    
   }
   .normal {
-      position: normal;
-      display: inline-block;    
+      position: static;
+      display: inline-block;
   }
