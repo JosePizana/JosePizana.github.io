@@ -11,9 +11,9 @@
 */
 
 body {
-    /* 1- color de fondo */
-    /* 2- ancho 90% */
-    /* 3- centrar */
+    background-color: #333333;
+    width: 90%;         
+    margin: auto;
 }
 
 .container {
@@ -21,40 +21,32 @@ body {
 }
 
 .youtuber, .footer, .header {
-    /* 4- color de fondo */
+    background-color: #424242;   
     border: 1px solid lightgray;
-    /* 5- redondear el borde */
-    /* 6- sombra */
+    border-radius: 10px;         
+    box-shadow: 0 0 10px black;  
     margin: 10px auto;
     padding: 20px;
     text-align: center;    
 }
+
 .footer {
     padding: 0px;
     color: white;
 }
 
-.imageHome{
-    border:black 4px solid;
+.imageHome {
+    border: black 4px solid;
     border-radius: 3%;
-    /* 7- tamanyo */
-    /* Se utiliza en imágenes y videos 
-    para asegurarse de que siempre llenen 
-    completamente el contenedor, manteniendo
-    su relación de aspecto*/
+    width: 90%;          
     object-fit: cover; 
 }
 
 .youtuber .images {
-
-    /* 8- redondear la imagen*/
+    border-radius: 50%;
     width: 150px;
-    height: 150px;    
-    /* Se utiliza en imágenes y videos 
-    para asegurarse de que siempre llenen 
-    completamente el contenedor, manteniendo 
-    su relación de aspecto*/
-    object-fit: cover; 
+    height: 150px;
+    object-fit: cover;
 }
 
 .youtuber h2 {    
@@ -69,24 +61,23 @@ body {
 }
 
 #menu {
-    /* 9- quita los puntos */
+    list-style: none;
 }
 
 li {
-    /* 10- haz que los li no sean de tipo bloque */
-    /* 11- borde izquierdo rojo */
+    display: inline;
     border-left: 4px red solid;
-    /* 12- separa el borde de la izquierda */
     padding-left: 5px;
 }
 
 #menu a {
-    /* 13- enlaces blancos */
-    /* 14- sin subrayado */
+    color: white;
+    text-decoration: none;
 }
 
 #menu a:hover {
-    /* 15- cambia el color al subrayado*/
+    text-decoration: underline;
+    color: red;
 }
 
 
@@ -103,17 +94,17 @@ li {
     transition: background-color 0.3s ease;
 }
 .button:hover {
-    /* 16- cambia el color al boton*/
+    background-color: #a7b300;
 }
 
 @media all and (max-width: 700px) {
     .youtuber, .footer {
-        /* 17- cambia el color al BORDE*/
+        border: 1px solid red;
     }
     .button {
-        /* 18- cambia el color al boton*/        
+        background-color: red;  
     }
     .button:hover {
-        /* 19- cambia el color al boton*/
+        background-color: darkred;
     }    
 }
