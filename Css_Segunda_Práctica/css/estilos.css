@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 body {
     background-color: #f9f6ff; 
     font-family: Arial, sans-serif;
@@ -33,7 +32,6 @@ body {
 #text {
     clear: both;
 }
-
 
 #text p {
     width: 90%;
@@ -68,9 +66,9 @@ body {
 
 #menu li {
     display: inline-block;
-    padding: 0 2px;
-    margin: 0;
     border-left: 5px solid red;
+    margin: 0 5px;
+    padding-left: 5px;
 }
 
 #menu li:first-child {
