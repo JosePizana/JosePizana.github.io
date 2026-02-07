@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 360px;
+    padding: 20px;
+    background: white;
+
+    border: 2px solid black;
+    border-radius: 14px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    background: #dedede;
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    background: #3aa0dd;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+}
+
+.description {
+    margin: 0 10px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 18px;
+}
+
+.stats span {
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.follow {
+    background: #3aa0dd;
+    color: white;
+}
+
+.message {
+    background: #eee;
+}
