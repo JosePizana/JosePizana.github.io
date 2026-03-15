@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo invisible</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="app-container">
+        <section class="card">
+            <h1>Amigo Invisible</h1>
+            <p>Añade participantes y reparte los pares</p>
+            <form action="" id="formulario">
+                <label for="nombre">Nombre del amigo</label>
+                <div class="input-row">
+                    <input type="text" id="nombre" placeholder="Ej: Lorena" autocomplete="off">
+                    <input type="submit" value="Añadir" id="botonAnyadir">
+                </div>
+            </form>
+            <button id="botonResuelve" class="reparte-btn">Reparte</button>
+        </section>
+
+        <section class="columns">
+            <article class="card panel-container">
+                <h2>Participantes</h2>
+                <div id="panel"></div>
+            </article>
+
+            <article class="card solucion-container">
+                <h2>Resultados</h2>
+                <div id="solucion"></div>
+            </article>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
