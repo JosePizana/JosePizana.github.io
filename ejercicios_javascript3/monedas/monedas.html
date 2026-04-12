@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio simple</title>
+</head>
+
+<style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f4f6f8;
+            color: #1f2937;
+            font-family: system-ui, sans-serif;
+        }
+
+        h1, h2 {
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 15.2px;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+
+        input[type="number"],
+        input[type="button"] {
+            width: 100%;
+            max-width: 320px;
+            padding: 13.6px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 14.4px;
+            font-size: 16px;
+            background: #ffffff;
+        }
+
+        input[type="number"] {
+            margin-top: 12px;
+        }
+
+        input[type="button"] {
+            margin-top: 12px;
+            cursor: pointer;
+            background: #0f172a;
+            color: white;
+            border-color: transparent;
+            transition: background 150ms ease;
+        }
+
+        input[type="button"]:hover {
+            background: #1e293b;
+        }
+
+        #resultado {
+            width: 100%;
+            max-width: 360px;
+            margin-top: 16px;
+        }
+
+        #resultado ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+        }
+
+        #resultado li {
+            padding: 14.4px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        #resultado li:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+<body>
+    <h1>Conversor de divisas</h1>
+    <h2>con https://frankfurter.dev/</h2>
+    Cantidad: <input type="number" id="cantidad" value="1">
+    <br> <input type="button" value="Convertir" id="convertir">
+    <div id="resultado"></div>
+    <script>
+        let moneda="EUR"
+        //let moneda="USD"
+        let url=`https://api.frankfurter.dev/v1/latest?base=${moneda}`
+
+        let cantidad=document.getElementById("cantidad")
+        let convertirBtn=document.getElementById("convertir")
+        let resultado=document.getElementById("resultado")
+
+        //funciones
+        /*
+            Devuelve un li con los datos de la moneda
+        */
+        function creaElemento(valor, clave) {
+            let total = Math.round(parseFloat(cantidad.value) * parseFloat(valor) * 100) / 100
+            let liElement = document.createElement("li")
+            liElement.textContent = `${cantidad.value} ${moneda} = ${total} ${clave}`
+            return liElement
+        }
+
+        
+        /*
+            Obtiene los cambios y los pinta en pantalla 
+        */
+        async function convertir() {
+            fetch(url)
+                .then(response => response.json())
+                .then(datos => {
+                    console.log(datos)
+                    let cambios = Object.entries(datos.rates)
+                    let lista = document.createElement("ul")
+
+                    cambios.forEach(([clave, valor]) => {
+                        console.log(clave, valor)
+                        let elemento = creaElemento(valor, clave)
+                        lista.appendChild(elemento)
+                    })
+
+                    resultado.appendChild(lista)
+                })
+                .catch(error => console.log(error))
+        }
+
+        //eventos
+        convertirBtn.addEventListener("click", function(){
+            resultado.innerHTML=""
+            convertir()
+        })
+
+
+    </script>
+</body>
+</html>
